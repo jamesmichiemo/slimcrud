@@ -14,6 +14,11 @@
     $sth->execute();
     $results = $sth->fetchall(PDO::FETCH_ASSOC);
 
+    echo "<h1>Twittra<h1>
+    
+ <h2>Timeline</h2>";
+   
+
     foreach ($results as $result) {
       echo "<li>".$result['message']."<a href ='/editmessage/".$result['id']."'>edit</a><a href='deletemessage/".$result['id']."'>x</a></li>";
     }
